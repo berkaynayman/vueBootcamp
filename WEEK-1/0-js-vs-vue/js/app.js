@@ -1,4 +1,4 @@
-const todoText = document.querySelector("#todoText");
+const todoText = document.querySelector("#todoTexty");
 const addBtn   = document.querySelector("#addBtn");
 const todoList = document.querySelector("#todoList");
 /*
