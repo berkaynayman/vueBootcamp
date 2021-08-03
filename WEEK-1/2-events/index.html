@@ -13,8 +13,33 @@
         <div class="row mt-5">
             <div class="col-4 offset-4">
                 <h3 class="text-center">event</h3>
-                <input @input="updateValue" type="text" class="form-control">
+                <!-- proje çok büyüdüğü zaman bu kod dizimi doğru olmaz - START -->
+                <input
+                    @input="updateValue"
+                    :value="fullName"
+                    type="text"
+                    class="form-control"
+                />
+                <!-- proje çok büyüdüğü zaman bu kod dizimi doğru olmaz - FINISH -->
+                <!-- v-model burada hayat kurtatıcı işlevi var diyebiliriz 
+                     iki yönlü iletişim yapılıyor -->
+                <input
+                    v-model="fullName"
+                    type="text"
+                    class="form-control"
+                />
+                {{ fullName }}
                 <br/>
+                <!--
+                    Directive
+                    bir elementin yapısını davranış biçimini
+                    şeklini değiştirebilen attribute parçalarıdır
+                    eğer bir elementin içinde v-xx , v-ss gibi parçalar bulunuyor
+                    ises bu element directivdir
+                    v-on:@ eventi bağlanmamızı sağladı
+                    v-bind: attribute ın değerinin nereden geleceğini söyledi
+                    v-model da bir directive
+                -->
                 <button class="btn btn-primary btn-sm">
                     Ekle
                 </button>
