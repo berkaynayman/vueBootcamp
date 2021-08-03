@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Burası Template -->
+    <div id="app">
+        {{ changeTitle("Nu başlangış title i") }}
+        <h1>{{ title }}</h1> <!-- burası bir elementin textcontent ti 
+        string inter plution textcontentin bulunduğu yerde çalışır -->
+        <p>{{ content }}</p> <!-- burası bir elementin textcontent ti -->
+        
+        <!-- TRUE-->
+        <a :target="eduflow.target"
+           :href="eduflow.url"
+           :alt="eduflow.alt">
+            {{ eduflow.url }}
+        </a> 
+        <br><br>
+        <button v-on:click="changeTitle('button 1 e tıklandı')">Button 1</button>
+
+        <button v-on:click="changeTitle('button 2 ye tıklandı')">Button 2</button>
+
+        <div class="box" @click="changeTitle('box tan gelen change')"
+        v-on:mousemove="updateCordinates('mousemooouvee', $event)">
+            <span>X : {{coords.x}} - Y : {{coords.  y}} 
+            </span>
+        </div>
+    </div>  
+    <!-- Burası Template -->
+
+    <script src="app.js"></script>  
+</body>
+</html>
