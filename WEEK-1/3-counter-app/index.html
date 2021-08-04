@@ -11,6 +11,7 @@
 <body>
     <div class="container" id="app">
         <div class="row mt-5">
+            
             <div class="col-5 card p-2">
                 <h3 class="text-center">{{ counter }}</h3>
                 <div class="d-flex justify-content-center alignitems-center">
@@ -26,6 +27,18 @@
                 </div>
                 -->
             </div>
+
+            <div class="col-5 card p-2">
+                <h3 class="text-center">{{ counter2 }}</h3>
+                <div class="d-flex justify-content-center alignitems-center">
+                    <button @click="counter2++" class="btn me-2 btn-primary">+</button>
+                    <button @click="counter2--" class="btn me-2 btn-danger">-</button>
+                </div>
+                <div class="alert alert-danger">
+                    {{ getCounter2Result() }}
+                </div>
+            </div>
+
         </div>
     </div>
     <script src="app.js"></script>
