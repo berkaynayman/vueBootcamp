@@ -13,7 +13,9 @@
         VUE ise bunu otomatik olarak yapar
     -->
     <div id="app">
-        <input type="text" id="todoText" v-model="todoText" />
+        <input type="text" id="todoText" v-model="todoText" /> 
+        <!-- v-model bir directivdir. directivler elementin davranışlarını, bilgilerini
+        değiştirmek için kullanılan küçük attribute lerdir v-blabla yani "v-" gördüğümüz directive dir -->
             <button id="addBtn" @click="addTodo">Ekle</button>
         <ul id="todoList">
             <li v-for="todo in todoList" :key="todo">
