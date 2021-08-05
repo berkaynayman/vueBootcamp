@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>Etüt</title>
+</head>
+<body>
+    <style>
+        .box{
+            width: 250px;
+            height: 250px;
+            background-color: blue; 
+        }
+    </style>
+    <div id="app">
+        <h1>html üzerindcen yazılan statik title</h1>
+        <h1>{{ title }}</h1>
+        <p>{{ content }}</p>
+        <p>{{ hobbies[hobbies] }}</p>
+        <h2>{{ personel.salary }}</h2>
+        <div v-html="linkGo"></div>
+        <br><br>
+        <a :href="url" target="_blank">link go 2</a>
+        <button @click="updateTitle">
+            updateTitle
+        </button>
+        <br><br>
+        <div @mousemove="positionInfo" class="box">
+            <h1>X : {{x}}, Y : {{y}}</h1>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, iste.
+        </div>
+        <br><br>
+        <input type="text" :value="title" @input="title = $event.target.value">
+        <input type="text" v-model="title">
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
