@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reactivty</title>
+    <link rel="stylesheet" href="../../9-Odevler/odev1/style.css">
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <h2> {{ counter }} </h2>
+            <button @click="counter++" class="green">++</button>
+            <button @click="counter--" class="red">--</button>
+            <p> {{ getResult }} </p>
+        </div>
+        <div class="container">
+            <h2> {{ counter2 }} </h2>
+            <button @click="counter2++" class="red">++</button>
+            <button @click="counter2--" class="green">--</button>
+            <p> {{ getResult2 }} </p>
+        </div>
+        <div class="container">
+            <h2>{{ itemList }}</h2>
+            <button @click="addOne">Ekle</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
