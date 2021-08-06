@@ -17,9 +17,9 @@
         <div class="mb-10">
           <button v-on:click="alertShow()">Alert Göster</button>
         </div>
-        <!-- 2) "keydown" event'ini dinleyerek value değişkeni içerisinde yazdığınız veriyi saklayın. (ipucu: event.target.value size yazdığınız değeri verebilir.) -->
+        <!-- 2) "keyup" event'ini dinleyerek value değişkeni içerisinde yazdığınız veriyi saklayın. (ipucu: event.target.value size yazdığınız değeri verebilir.) -->
         <div class="mb-10">
-          <input type="text" @keydown="addValue" />
+          <input type="text" @keyup="addValue" />
           <p>{{ value }}</p>
         </div>
         <!-- 3) 2.Uygulamayı düzenleyerek eğer keydown ENTER ise yazdığınız verinin value değerine aktarılmasını sağlayın -->

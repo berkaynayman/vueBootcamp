@@ -14,9 +14,9 @@
     <div id="exercise" class="container">
       <div class="card">
         <!-- 1) Interpolation yani {{}} Syntax'ını kullanarak <p> elementinin içeriğini Name ve Age verileriyle doldurun-->
-        <p>NAME : {{ nameSur}} - AGE : {{ age*5 }}</p>
+        <p>NAME : {{ nameSur}} - AGE : {{ age }}</p>
         <!-- 2) Yaşınızı 5 ile çarpıp <p> içerisinde yazdırınız -->
-        <p class="mt-10"></p>
+        <p class="mt-10">{{ age * 5 }}</p>
 
         <!-- 3) Fonksiyon çağırarak 0 ile 1 arasında bir sayı üretip <p> içerisinde yazdırınız (Math.random()) -->
         <p class="mt-10">{{randomNumber()}}</p>
@@ -25,7 +25,7 @@
             <img :src="url" alt="pixies">
         <!-- 5) Name değişkeninin değerinin <input /> içine yazdığınız değer ile anlık olarak değiştirilmesini sağlayınız. ("value" attribute kullanarak) -->
         <div class="mt-10">
-          <input type="text" v-model="nameSur"/>
+          <input type="text" :value="nameSur" @input="nameSur = $event.target.value"/>
         </div>
       </div>
     </div>
