@@ -1,0 +1,47 @@
+tekrar edilen bölümler component olarak tanımlanır
+Componentler : 
+            Kendi dünyasında çalışan küçük Vue uygulaması olarak düşünülebilir.
+            Normal bir Vue uygulamasının sahip olduğu her şeye sahiptirler
+                data, methods, reactive properties(computed, watch)
+                life cycle hooks
+
+NELER COMPONENT YAPISINA DÖNÜŞTÜRÜLMELİDİR ?
+ tekrar edilen GUI parçaları
+ çok fazla kod bloğu bulunduran GUI parçaları
+ içerisinde kendisine ait sservis bağlantısı bulunduran gui parçaları
+ template yapısına uygun proje yapıyorsanız, yüm ui elementleri
+    form elementleri
+    button
+    slider
+    menüler
+    header, footer
+daha hiyerarşik bir yapıda projeye sahip olmak için parçala ve yönet her zaman daha iyi seçenektir
+
+PEKİ BİZİM ÖRNEK WEB SAYFAMIZI COMPONENT YAPISINA DÖNÜŞTÜRMEK İSTESEYDİK?
+    tekrar edilen GUI parçaları
+        header, footer, ürün kartı
+    fazla kod bloğuna sahip GUI parçaları
+        slider (ana sayfa ve arama sayfası)
+
+COMPONENT OLABİLECEK PARÇALAR BELİRLENDİĞİNDE
+    sıra artık bu parçaları component haline getirmekte
+    app.component("appHeader", {options});
+    app.component("appFooter", {options});
+TANIMLAMA GERÇEKLEŞTİKTEN SONRA SAYFAMIZ DA KULLANMAK İÇİN
+<appHeader/> YADA <appHeader></appHeader>
+<appFooter/> YADA <appFooter></appFooter>
+
+PEKİİ options NEDİR ????
+
+options > Component içerisinde kullanacağımız Vue instance yapıları
+    data(), methods
+    reactive properties
+        computed, watch
+    life cycle hooks
+        beforeCreate, created, beforeMount, mounted, beforeUpdate, updated, beforeUnmount, unmounted
+    ve en önemlisi
+        template bizim GUI parçaları yani HTML kodunu içerir.
+
+COMPONENT TÜRLERİ ?
+    String Template Component
+    String File Component
