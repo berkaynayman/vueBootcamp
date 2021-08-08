@@ -1,5 +1,10 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import "@/assets/style.css" 
+import { createApp } from "vue";
+import App from "./App.vue";
+//import "@/assets/style.css" ;
+import appHeader from "@/components/appHeader";
 
-createApp(App).mount('#app')
+const app = createApp(App);
+
+app.component("app-header", appHeader);
+
+createApp(App).mount('#app');
