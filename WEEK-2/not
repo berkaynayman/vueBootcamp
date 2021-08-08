@@ -1,0 +1,45 @@
+ESlint → bizim kodumuzu bizim belirlediğmiz standartlara göre şekillendirmemize sağlıyor mesala computed lar herzaman watcherların üstünde olması gerekikir
+
+mesela computed ların başında altçizgi olması gerekir diyor
+
+ecmascript, güncel javascript kullanmak istiyosak bunu browserların çoğu algılamıyor bu yüzden babel kullanırız. babel kodumuzu browserın anlıcağı şekilde convert eder derler
+
+daha iyi devolopment süreci gecirebilmek için. ahha hılzı daha pro daha iyi projler geliştirmek için devolopment server ı ihtiyacımız var. bunlardan biri CLI diğeri ise vite
+
+SRC klasörü → proje geliştirme boyunca içli dışlı olucağımız dizin
+
+SRC/assets → compiler edilebilir yapılar koyarız. css veya fotoğrafları ekleriz
+
+.vue uzantılı dosyalar bir component dosyalarıdır. single file component(SFC)
+
+component içerisine 3 farklı yapı alır;
+
+<template></template> → html kodları içerir
+
+<script></script>
+
+<style></style>
+
+.VUE UZANTILI DOSYALAR
+/* app.vue bir componenttir. html, script bulundurur. ek olarak birde style alır
+    vue uzantılı dosyalar componentdir. single file component
+
+    bir component içerisine 3 farklı yapı alır
+    html için -> < template></template>
+    js için -> < script></script>
+    style için -> < style></style>
+
+    devolopment sürecinde bu sıralama developer lar
+    tarafından kabul görüyor
+    < script></script>
+    < template></template>
+    < style></style>
+*/
+
+MAİN.JS DOSYASI İÇİN
+
+import { createApp } from 'vue'; /* vue dan createApp i import et -> const app = Vue.createApp({}); */
+import App from './App.vue';
+// App.vue içerisindeki Vue instancenı alır main.js üzerinden çalıştırır.
+// İsmi App olarak diye birşey yok herhangi bir isim belirtebiliriz
+createApp(App).mount('#app');
