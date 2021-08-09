@@ -2,9 +2,9 @@
   <div class="container">
     <h3 class="text-center"> ToDo App</h3>
     <hr>
-    <AddSection/>
-    <TodoList :myData="todoList" />
-    <ResultBar/>
+    <AddSection @add-todo="addNewTodo" />
+    <TodoList @delete-todo-item="deleteItem" :myData="todoList" />
+    <ResultBar :itemCount="todoList.length"/>
   </div>
 </template>  
 <script>
@@ -41,12 +41,12 @@ export default {
       this.todoList = this.todoList.filter((t) => t !== todoItem); 
     },
     addNewTodo(event){
+      console.log("event ",event);
       this.todoList.push({
         id : new Date().getTime(),
-        text : event.target.value
-      });
-      event.target.value = "";
+        text : event
+      })
     }
   }
 }
-</script>
+</script>  

@@ -9,8 +9,7 @@
       <button @click="deleteItem(todoItem)" class="sm red">Sil</button>
       </li>
         -->
-        {{ myData }}
-      <ListItem v-for="todoItem in myData" :key="todoItem" :item="todoItem" />
+      <ListItem @delete-todo-item="$emit('delete-todo-item', $event)" v-for="todoItem in myData" :key="todoItem" :item="todoItem" />
     </ul>
 </template> 
 <script>
