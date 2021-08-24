@@ -1,0 +1,21 @@
+state -> bir componentde, bir uygulamada kullandığımız değişkenler.
+- uygulamada state leri kullandığımız farklı yerler oluyor ve onları çekiyoruz
+sürekli. Bu yüzden stateleri yönetmemiz gerekir bunada -> STATE MANAGEMENT deriz.
+State Yönetmemiz gerekir bu noktalarda state management tooları kullanırız.
+VueJs in resmi olarak kullandığı State Management tool'u Vuex4. Vuex4 çok daha başarılı
+ve kolay diyebiliriz. 
+
+ Niye Vuex kullanılır ?
+ Uygulamamız 'da bütün componentlerin bilgi paylaşmasını istiyorisek Vuex kullanmalıyız.
+ Uygulama geliştirirken ilk başta "ben du daya yı vuex temi tutsam componenttemi tutsam" ?
+ bu soru çok fazla aklımıza gelicektir. Bunu basit olarak aşmak için "bu bilgiyi başka bir
+ component kullanıcakmı ?" eğer kullanıcakise parent veya child olarak aynı seviyede değilse
+ hiç düşünmeden Vuex kullanmalıyız. 
+
+Vuex global bir object üzerinden çalışır. Vuex bize global olarak bütün uygulama
+üzerinde erişilebilir bir yapı sunar. Bu yapının adına store denir. Yani ilk başta "store"
+oluşturmamız gerekiyor. Bundan dolayı src içerisine store.js isimli dosya oluşturduk. Adının
+pekbir önemi yok ahmet.js, temel.js denilebilir. Anlamlısı olması için store adı tercih edilir.
+
+ Store.js içeriisnde statelermizi tanımlıcaz
+
