@@ -8,6 +8,13 @@
     <ul>
       <li v-for="permission in $store.state.permissions" :key="permission">{{ permission }}</li>
     </ul>
+    <hr>
+    <ul>
+      <li v-for="user in $store.state.userList" :key="user">{{ user }}</li>
+    </ul>
+    <hr>
+    <p> {{ $store.state.fullName }} </p>
+    <button @click="updateName">fullName i güncelle</button>
   </div>
 </template>
 
@@ -16,9 +23,14 @@
 export default {
   name: 'App',
   created(){
-    // life cycle
+    // created() is life cycle
     console.log(this.$store.state.person);
     console.log(this.$store.state.theme);
+  },
+  methods : {
+    updateName(){
+      this.$store.state.fullName = "---------";
+    }
   }
 }
 </script>

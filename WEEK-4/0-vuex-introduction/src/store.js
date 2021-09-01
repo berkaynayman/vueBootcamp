@@ -8,7 +8,9 @@ const store = createStore({
             age : 20 
         },
         theme: "dark",
-        permissions: [1, 2, 3, 4, 5]
+        fullName : "Berkay Nayman",
+        permissions: [1, 2, 3, 4, 5],
+        userList:[ "Berkay", "Temel", "Ece", "Dursun", "Hatice"],
     }
 });
 
