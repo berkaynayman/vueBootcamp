@@ -1,15 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <p>
+      {{ $store.state.person }}
+      {{ $store.state.permissions }}
+
+    </p>
+    <ul>
+      <li v-for="permission in $store.state.permissions" :key="permission">{{ permission }}</li>
+    </ul>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  created(){
+    // life cycle
+    console.log(this.$store.state.person);
+    console.log(this.$store.state.theme);
   }
 }
 </script>
