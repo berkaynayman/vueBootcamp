@@ -26,10 +26,19 @@ export default {
     // created() is life cycle
     console.log(this.$store.state.person);
     console.log(this.$store.state.theme);
+    /* diyelimki projemizde farklı yerlerde mobilyayı filtereleyip ekrana çekiyoruz
+       mabilya diye yazım hatası yapabiliriz. doğal olarak 1 standart elde etmek için
+       2- belirli kullanıcı tarafına, yazılımcıların kullanabileceği belirli başlı
+       bilgileri filtreleyebilmek için state leri direk kullanıma açmak yerine getter ile
+       açıyoruz. store.js içine getters{} oluşturduk. */
+    //console.log(this.$store.state.itemList.filter(i => i.type === "mobilya"));
+    
+    // getters içerisindeki function çağırdık
+    console.log(this.$store.getters.woodItems);
   },
   methods : {
     updateName(){
-      this.$store.state.fullName = "---------";
+      this.$store.state.fullName = new Date().getTime();
     }
   }
 }
