@@ -19,3 +19,5 @@ pekbir önemi yok ahmet.js, temel.js denilebilir. Anlamlısı olması için stor
 
  Store.js içeriisnde statelermizi tanımlıcaz
 
+state den direk veri çekip kullanmak yerine
+gettersdan çekip kullanmak daha doğrudur
