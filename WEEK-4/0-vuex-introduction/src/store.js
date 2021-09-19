@@ -25,8 +25,35 @@ const store = createStore({
             { id : 5, title : "Bardak",   type : "plastik"},
         ]
     },
+    /*state'i çok hızlı bir şekilde update eder.*/
     mutations :{
-
+        /*itemliste yenibir öge ekliyeceğiz
+        görevi statei update etmek olduğu için ilk ögesi "state" olur.
+        newItem(state, item){} buraya item veye herhangi birşey yazabiliriz*/
+        /*database işlemleri yapıcakisek mutation bizim isteğimizi beklemez, bu yüzden boş bir
+        veri ile set eder. belki kendimiz bir yolunu bulup yapabiliriz fakat bir geçikme olduğu dahilinde
+        data mızı set etmez yani garanti bir yol değil. garanti bir yol için ACTION u tercih edebiliriz.
+        Action, mutationsa göre daha iyi diyebiliriz.SEBEP?Asenkron çalışır.*/
+        newItem(state, item){
+            state.itemList.push(item);
+        }
+    },
+    actions:{
+        /*context bir object dir ve içerisinde birden fazla bilgi taşır*/
+        /*newItem(context, item){
+            console.log("item :>> ", item)
+            setTimeout(() => {
+                context içerisinden
+                    context.state
+                    context.dispatch en çok kullanacaklarımız  
+                context.commit("newItem", item);
+            },2000);
+        }*/
+        newItem({commit}, item){
+            setTimeout(() => {
+                commit("newItem",item);
+            })
+        }
     },
     /* eğer sürekli kullandığımız birşey ise filter(mobilya gibi)
         burada getters da tamamlıyoruz */
