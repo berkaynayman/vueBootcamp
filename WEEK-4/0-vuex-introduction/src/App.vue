@@ -1,11 +1,11 @@
 <template>
   <div>
+    <!--
     <p>
       {{ $store.state.user }}
       {{ $store.state.permissions }}
-
     </p>
-    <!--
+    
     <ul>
       <li v-for="permission in $store.state.permissions" :key="permission">{{ permission }}</li>
     </ul>
@@ -13,25 +13,34 @@
     <ul>
       <li v-for="user in $store.state.userList" :key="user">{{ user }}</li>
     </ul>
-    -->
 
     <ul>
       <li v-for="item in woodItems" :key="item.title">{{ item.title }}</li>
     </ul>
     <hr>
+    -->
+    <!--
     <p> {{ $store.state.fullName }} </p>
     <button @click="updateName">fullName i güncelle</button>
+    -->
+    <UserList/>
+    <NewUser/>
   </div>
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import UserList from "@/components/UserList.vue";
+import NewUser  from "@/components/NewUser.vue";
 export default {
   name: 'App',
+  components :{
+    UserList,
+    NewUser
+  },
   created(){
     // created() is life cycle
-    console.log(this.$store.state.user);
-    console.log(this.$store.state.theme);
+    /*console.log(this.$store.state.user);
+    console.log(this.$store.state.theme);*/
     /* diyelimki projemizde farklı yerlerde mobilyayı filtereleyip ekrana çekiyoruz
        mabilya diye yazım hatası yapabiliriz. doğal olarak 
        1- standart elde etmek için
@@ -41,20 +50,23 @@ export default {
     //console.log(this.$store.state.itemList.filter(i => i.type === "mobilya"));
     
     // getters içerisindeki function çağırdık
-    console.log(this.$store.getters.woodItems);
+    //console.log(this.$store.getters.woodItems);
     //console.log(this.$store.getters.activeUser);
-    console.log('this.activeUser :>> ', this.activeUser);
+    //console.log('this.activeUser :>> ', this.activeUser);
   },
   methods : {
+    /*
     updateName(){
-      this.$store.state.itemList.push({ id : 6, title : "Sehpa", type : "mobilya" }); //burada push ettikten sonra react olduğu için list olucaktır
+      this.$store.state.itemList.push({ id : this.$store.state.fullName, title : "Sehpa", type : "mobilya" }); //burada push ettikten sonra react olduğu için list olucaktır
       this.$store.state.fullName = new Date().getTime();
     } 
+    */
   },
   computed :{
+    /*
     ... mapGetters(["woodItems", "activeUser"]),
-    /*farklı syntax kullanımı
-    ...mapGetters({
+    farklı syntax kullanımı
+    ...mapGetters({spread operator
       agacElemanlari : "woodItems", agacElemanları adinda computedım var değer woodItemsdan geliyor
       activeUser : "activeUser"
     })

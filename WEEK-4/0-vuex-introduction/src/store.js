@@ -25,6 +25,9 @@ const store = createStore({
             { id : 5, title : "Bardak",   type : "plastik"},
         ]
     },
+    mutations :{
+
+    },
     /* eğer sürekli kullandığımız birşey ise filter(mobilya gibi)
         burada getters da tamamlıyoruz */
     getters : {
